@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Babyyy ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #ff758c, #ff7eb3);
+    overflow:hidden;
+    color:white;
+}
+
+.container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,0.2);
+    max-width:700px;
+    animation:fade 2s ease;
+}
+
+h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    border-radius:50px;
+    background:white;
+    color:#ff4f81;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    background:#ff4f81;
+    color:white;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:float 6s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) scale(0);
+    }
+    100%{
+        transform:translateY(-10vh) scale(1.5);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>My Babyyyy ❤️🥰</h1>
+
+        <p>
+            You are my happiness... my peace... my everything... ❤️😊<br><br>
+
+            I know we fight sometimes... and I make mistakes... 😭<br><br>
+
+            But babyyy... I am truly sorry for every hurt... every misunderstanding... every sad moment... 🌹💋<br><br>
+
+            I love you more than words can explain... 😍🥰<br><br>
+
+            Forever yours... always and forever... ❤️
+        </p>
+
+        <a href="#" class="btn">I Love You ❤️</a>
+    </div>
+</div>
+
+<script>
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+20)+"px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
