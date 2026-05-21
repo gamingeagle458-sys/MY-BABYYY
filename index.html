@@ -16,99 +16,121 @@
 body{
     font-family:Arial, sans-serif;
     background:linear-gradient(135deg, #ff758c, #ff7eb3);
-    overflow:hidden;
     color:white;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:15px;
-}
 
-.container{
-    width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
+
+    min-height:100vh;
+    overflow:auto;
+
+    padding:20px;
 }
 
 .card{
-    width:100%;
-    max-width:650px;
+
+    width:90%;
+    max-width:500px;
+
     background:rgba(255,255,255,0.15);
-    padding:30px 25px;
-    border-radius:25px;
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 30px rgba(0,0,0,0.2);
+
+    padding:25px;
+
+    border-radius:20px;
+
     text-align:center;
-    animation:fade 2s ease;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+
 }
 
 h1{
-    font-size:clamp(2rem, 5vw, 3.5rem);
+
+    font-size:40px;
+
     margin-bottom:15px;
+
 }
 
 p{
-    font-size:clamp(1rem, 2.5vw, 1.4rem);
-    line-height:1.8;
+
+    font-size:18px;
+
+    line-height:1.7;
+
 }
 
 .btn{
+
     display:inline-block;
-    margin-top:25px;
-    padding:14px 30px;
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
     border-radius:50px;
+
     background:white;
+
     color:#ff4f81;
+
     text-decoration:none;
+
     font-weight:bold;
-    font-size:1rem;
-    transition:0.3s;
-}
 
-.btn:hover{
-    transform:scale(1.08);
-    background:#ff4f81;
-    color:white;
-}
-
-@keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 
 .heart{
-    position:absolute;
+
+    position:fixed;
+
     color:white;
+
     animation:float 6s linear infinite;
+
     opacity:0.7;
+
     z-index:-1;
+
 }
 
 @keyframes float{
+
     0%{
-        transform:translateY(100vh) scale(0);
+        transform:translateY(100vh);
     }
+
     100%{
-        transform:translateY(-10vh) scale(1.5);
+        transform:translateY(-10vh);
     }
+
 }
+
+/* MOBILE */
 
 @media(max-width:600px){
 
     .card{
-        padding:25px 18px;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
     }
 
     p{
-        line-height:1.6;
+
+        font-size:16px;
+
     }
 
 }
@@ -118,27 +140,25 @@ p{
 
 <body>
 
-<div class="container">
+<div class="card">
 
-    <div class="card">
+    <h1>My Babyyyy ❤️🥰</h1>
 
-        <h1>My Babyyyy ❤️🥰</h1>
+    <p>
 
-        <p>
-            You are my happiness... my peace... my everything... ❤️😊<br><br>
+        You are my happiness... my peace... my everything... ❤️😊<br><br>
 
-            I know we fight sometimes... and I make mistakes... 😭<br><br>
+        I know we fight sometimes... and I make mistakes... 😭<br><br>
 
-            But babyyy... I am truly sorry for every hurt... every misunderstanding... every sad moment... 🌹💋<br><br>
+        But babyyy... I am truly sorry for every hurt... every misunderstanding... every sad moment... 🌹💋<br><br>
 
-            I love you more than words can explain... 😍🥰<br><br>
+        I love you more than words can explain... 😍🥰<br><br>
 
-            Forever yours... always and forever... ❤️
-        </p>
+        Forever yours... always and forever... ❤️
 
-        <a href="#" class="btn">I Love You ❤️</a>
+    </p>
 
-    </div>
+    <a href="#" class="btn">I Love You ❤️</a>
 
 </div>
 
@@ -154,16 +174,17 @@ function createHeart(){
 
     heart.style.left=Math.random()*100+"vw";
 
-    heart.style.fontSize=(Math.random()*20+15)+"px";
+    heart.style.fontSize=(Math.random()*15+15)+"px";
 
     document.body.appendChild(heart);
 
     setTimeout(()=>{
         heart.remove();
     },6000);
+
 }
 
-setInterval(createHeart,300);
+setInterval(createHeart,400);
 
 </script>
 
